@@ -1,0 +1,87 @@
+###################### Winlogbeat Project Configuration ########################
+
+# This configuration is for the AI-Driven Detection Lab project.
+# New users: Replace <elk-server-ip>, <elastic-username>, <elastic-password>
+# with your own ELK server details.
+
+# ======================== Event Logs to Monitor ===============================
+
+winlogbeat.event_logs:
+  # Core Windows logs
+  - name: Application
+    ignore_older: 72h
+
+  - name: System
+
+  - name: Security
+
+  # Sysmon log (requires Sysmon to be installed)
+  - name: Microsoft-Windows-Sysmon/Operational
+
+  # PowerShell logs for attack detection
+  - name: Windows PowerShell
+    event_id: 400, 403, 600, 800
+
+  - name: Microsoft-Windows-PowerShell/Operational
+    event_id: 4103, 4104, 4105, 4106
+
+  # Forwarded logs (if Windows Event Forwarding is enabled)
+  - name: ForwardedEvents
+    tags: [forwarded]
+
+# ============================== Kibana Setup =================================
+
+# Configure Kibana to load dashboards (optional but recommended)
+setup.kibana:
+  host: "http://<elk-server-ip>:5601"
+
+# Uncomment to enable auto-loading of dashboards into Kibana
+# setup.dashboards.enabled: true
+
+# ============================== Elasticsearch Output ==========================
+
+output.elasticsearch:
+  # Replace with your ELK server IP/hostname
+  hosts: ["https://<elk-server-ip>:9200"]
+
+  # Authentication
+  username: "<elastic-username>"
+  password: "<elastic-password>"
+
+  # Use HTTPS with self-signed certs
+  ssl.verification_mode: none
+
+  # Optional: Route events to Winlogbeat security pipeline
+  pipeline: "winlogbeat-%{[agent.version]}-routing"
+
+# =============================== Processors ==================================
+
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded
+  - add_cloud_metadata: ~
+
+# ============================== Logging (Optional) ============================
+
+# Uncomment to enable debug logging if troubleshooting
+# logging.level: debug
+# logging.selectors: ["*"]
+
+###############################################################################
+#                         IMPORTANT FOR NEW USERS                             #
+###############################################################################
+# 1. Replace all <placeholders> with your environment values:
+#       <elk-server-ip>    - IP or hostname of your ELK server
+#       <elastic-username> - Your Elasticsearch username (usually "elastic")
+#       <elastic-password> - Your Elasticsearch password
+#
+# 2. Make sure Sysmon and PowerShell logging are enabled on Windows.
+#
+# 3. After editing, restart Winlogbeat service:
+#       Stop-Service winlogbeat
+#       Start-Service winlogbeat
+#
+# 4. Verify logs in Kibana:
+#       Go to Stack Management > Index Management
+#       Look for indices starting with: winlogbeat-*
+###############################################################################

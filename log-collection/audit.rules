@@ -1,0 +1,11 @@
+# Clear existing rules
+-D
+
+# Watch for /bin/bash execution (possible reverse shell)
+-a always,exit -F arch=b64 -S execve -F path=/bin/bash -k reverse_shell
+-a always,exit -F arch=b32 -S execve -F path=/bin/bash -k reverse_shell
+
+# Optional: Monitor /bin/sh, nc, and python
+-a always,exit -F arch=b64 -S execve -F path=/bin/sh -k reverse_shell
+-a always,exit -F arch=b64 -S execve -F path=/usr/bin/nc -k reverse_shell
+-a always,exit -F arch=b64 -S execve -F path=/usr/bin/python3 -k reverse_shell

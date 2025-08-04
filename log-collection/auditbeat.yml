@@ -1,0 +1,79 @@
+###################### Auditbeat Configuration #########################
+
+# =========================== Modules configuration ============================
+auditbeat.modules:
+
+# 1. Auditd Module (captures system calls and reverse shells)
+- module: auditd
+  resolve_ids: true
+  failure_mode: silent
+  backlog_limit: 8196
+  rate_limit: 0
+  include_raw_message: true
+  include_warnings: true
+
+  # Load rules from external files (optional)
+  audit_rule_files: [ '${path.config}/audit.rules.d/*.conf' ]
+
+  # Inline audit rules
+  audit_rules: |
+    # Detect reverse shells via /bin/bash execution
+    -a always,exit -F arch=b64 -S execve -F path=/bin/bash -F key=reverse_shell
+
+    # Log all process executions (optional, verbose)
+    -a always,exit -F arch=b64 -S execve,execveat -k exec_logs
+
+    # Monitor identity-related files
+    -w /etc/group -p wa -k identity
+    -w /etc/passwd -p wa -k identity
+    -w /etc/gshadow -p wa -k identity
+
+# 2. File Integrity Module
+- module: file_integrity
+  paths:
+    - /bin
+    - /usr/bin
+    - /sbin
+    - /usr/sbin
+    - /etc
+
+# 3. System Module (host, login, process, socket, user)
+- module: system
+  datasets: [package]
+  period: 2m
+
+- module: system
+  datasets: [host, login, process, socket, user]
+  state.period: 12h
+  user.detect_password_changes: true
+  login.wtmp_file_pattern: /var/log/wtmp*
+  login.btmp_file_pattern: /var/log/btmp*
+
+# =============================== Kibana ======================================
+setup.kibana:
+  host: "https://<your-kibana-host>:5601"
+  username: "kibana"
+  password: "<kibana-password>"
+
+# ============================= Elasticsearch Output ===========================
+output.elasticsearch:
+  hosts: ["https://<your-es-host>:9200"]
+  username: "elastic"
+  password: "<elastic-password>"
+  ssl.verification_mode: none
+
+# =============================== Processors ==================================
+processors:
+  - add_host_metadata: ~
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+
+# =============================== Logging =====================================
+logging:
+  level: info
+  to_files: true
+  files:
+    path: /var/log/auditbeat
+    name: auditbeat.log
+    keepfiles: 7
+    rotateeverybytes: 10485760 # 10 MB
