@@ -264,25 +264,34 @@ graph TB
 
 > **Victim Ubuntu VM Dashboard**
 
-![[Pasted image 20250803220911.png]]
-![[Pasted image 20250803220951.png]]
-![[Pasted image 20250803221007.png]]
+<img width="1919" height="879" alt="Pasted image 20250803220911" src="https://github.com/user-attachments/assets/0fa65b23-cf43-4d93-82d6-549fb89d0cf3" />
+
+<img width="1915" height="770" alt="Pasted image 20250803220951" src="https://github.com/user-attachments/assets/20cdbe31-e410-4c11-b822-5c66b025f8f6" />
+
+<img width="984" height="528" alt="Pasted image 20250803221007" src="https://github.com/user-attachments/assets/e3dbfd78-2a02-4a61-a33f-1afe9d545900" />
+
 
 > **Attack Monitoring Table**
 
-![[Pasted image 20250803221156.png]]
+<img width="1919" height="920" alt="Pasted image 20250803221156" src="https://github.com/user-attachments/assets/7b87576c-a976-4f33-abe0-7763dfcef9dd" />
+
 
 ### 🛡️ **Detection Rule Interface**
 
 
-![[Pasted image 20250803232324.png]]
-![[Pasted image 20250803232351.png]]
+<img width="1919" height="922" alt="Pasted image 20250803232324" src="https://github.com/user-attachments/assets/5d37e0a7-6725-4e94-aeb9-bbdd7d407774" />
+
+<img width="1919" height="925" alt="Pasted image 20250803232351" src="https://github.com/user-attachments/assets/28e1778e-9212-48d0-89e0-745142493e60" />
+
 
 ### 📈 **ML Job Performance**
 
-![[Pasted image 20250803233836.png]]
-![[Pasted image 20250803234451.png]]
-![[Pasted image 20250803234546.png]]
+<img width="1919" height="928" alt="Pasted image 20250803233836" src="https://github.com/user-attachments/assets/854b4535-c1c6-4afd-8d17-7d6ff90045ca" />
+
+<img width="1919" height="924" alt="Pasted image 20250803234451" src="https://github.com/user-attachments/assets/1d026dc0-dc98-46b1-85b8-33b8df258182" />
+
+<img width="1919" height="922" alt="Pasted image 20250803234546" src="https://github.com/user-attachments/assets/f4de6236-a95c-4906-a27a-383a971e13be" />
+
 
 ---
 
@@ -347,9 +356,5 @@ Need help with your detection lab setup?
 ---
 
 <div align="center">
-
-**🎯 Happy Hunting! 🔍**
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/your-profile)
 
 </div>
