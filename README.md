@@ -1,4 +1,4 @@
-# 🛡️ Elastic SIEM Simulation
+#  Elastic SIEM Simulation
 
 ## _Advanced SIEM Project for Linux Threat Detection_
 
@@ -8,30 +8,30 @@
 
 _A comprehensive Security Information and Event Management (SIEM) laboratory designed for cybersecurity professionals, students, and detection engineers_
 
-**🎯 Detect • 📊 Analyze • 🚨 Respond**
+** Detect • Analyze •  Respond**
 
 </div>
 
 ---
 
-## 🎭 Project Overview
+##  Project Overview
 
-### 🔬 **What This Lab Demonstrates**
+### **What This Lab Demonstrates**
 
 This project showcases how modern SIEM solutions like Elastic Security can detect, investigate, and respond to Linux-based cyber attacks in real-time. Built using the industry-standard ELK Stack, this lab provides hands-on experience with:
 
 ```mermaid
 graph TD
-    A[👤 Attacker] -->|Executes| B[🚨 Privilege Escalation]
-    B --> C[📊 Auditbeat/Filebeat]
-    C --> D[🔍 Logstash]
-    D --> E[💾 Elasticsearch]
-    E --> F[📈 Kibana Dashboard]
-    F --> G[🛡️ SOC Analyst]
-    G --> H[⚡ Threat Response]
+    A[ Attacker] -->|Executes| B[ Privilege Escalation]
+    B --> C[ Auditbeat/Filebeat]
+    C --> D[ Logstash]
+    D --> E[ Elasticsearch]
+    E --> F[ Kibana Dashboard]
+    F --> G[ SOC Analyst]
+    G --> H[ Threat Response]
 ```
 
-### 🎯 **Core Learning Objectives**
+###  **Core Learning Objectives**
 
 |**Objective**|**Skills Developed**|**Real-World Application**|
 |---|---|---|
@@ -42,35 +42,35 @@ graph TD
 
 ---
 
-## 🏗️ **Technical Architecture**
+##  **Technical Architecture**
 
-### 🔧 **ELK Stack Components**
+###  **ELK Stack Components**
 
 The ELK Stack (Elasticsearch, Logstash, Kibana) provides a complete log management solution for centralizing, processing, and visualizing security data:
 
 ```mermaid
 flowchart LR
     subgraph "Data Sources"
-        A[🖥️ Linux Victim VM]
-        B[📝 System Logs]
-        C[🔒 Audit Logs]
+        A[ Linux Victim VM]
+        B[ System Logs]
+        C[ Audit Logs]
     end
     
     subgraph "Collection Layer"
-        D[📊 Auditbeat]
-        E[📄 Filebeat]
+        D[ Auditbeat]
+        E[ Filebeat]
     end
     
     subgraph "ELK Stack"
-        F[🔍 Logstash<br/>Processing]
-        G[💾 Elasticsearch<br/>Storage]
-        H[📈 Kibana<br/>Visualization]
+        F[ Logstash<br/>Processing]
+        G[ Elasticsearch<br/>Storage]
+        H[ Kibana<br/>Visualization]
     end
     
     subgraph "Detection & Response"
-        I[🚨 Alerts]
-        J[📊 Dashboards]
-        K[🔍 Investigation]
+        I[ Alerts]
+        J[ Dashboards]
+        K[ Investigation]
     end
     
     A --> D
@@ -89,16 +89,16 @@ flowchart LR
 
 |Component|Purpose|Key Features|
 |---|---|---|
-|**🔍 Elasticsearch**|Distributed search & analytics engine|• Real-time indexing<br/>• Scalable storage<br/>• Full-text search|
-|**📊 Logstash**|Data processing pipeline|• Log parsing<br/>• Data enrichment<br/>• Format normalization|
-|**📈 Kibana**|Data visualization platform|• Interactive dashboards<br/>• Search interface<br/>• Alert management|
-|**🎵 Beats**|Lightweight data shippers|• Auditbeat: System auditing<br/>• Filebeat: Log file monitoring|
+|** Elasticsearch**|Distributed search & analytics engine|• Real-time indexing<br/>• Scalable storage<br/>• Full-text search|
+|** Logstash**|Data processing pipeline|• Log parsing<br/>• Data enrichment<br/>• Format normalization|
+|** Kibana**|Data visualization platform|• Interactive dashboards<br/>• Search interface<br/>• Alert management|
+|** Beats**|Lightweight data shippers|• Auditbeat: System auditing<br/>• Filebeat: Log file monitoring|
 
 ---
 
-## 🔍 **MITRE ATT&CK Framework Integration**
+##  **MITRE ATT&CK Framework Integration**
 
-### 🎯 **Tactics & Techniques Covered**
+###  **Tactics & Techniques Covered**
 
 This lab focuses on detecting Privilege Escalation (TA0004) techniques that adversaries use to gain higher-level permissions:
 
@@ -117,7 +117,7 @@ mindmap
         [Permission Changes]
 ```
 
-### 📊 **Detection Coverage Matrix**
+###  **Detection Coverage Matrix**
 
 |**MITRE Technique**|**Detection Method**|**Data Source**|**Confidence Level**|
 |---|---|---|---|
@@ -127,28 +127,28 @@ mindmap
 
 ---
 
-## 📂 **Project Structure**
+##  **Project Structure**
 
 ```
 Elastic-ReverseShell-Detection/
-├── 🚀 attack-simulation/          # Attack scenario scripts
+├──  attack-simulation/          # Attack scenario scripts
 │   ├── invoke_attack.sh           # Main privilege escalation simulation
 │   ├── payloads/                  # Attack payloads & techniques
 │   └── README.md                  # Attack documentation
-├── 📚 docs/                       # Comprehensive documentation
+├──  docs/                       # Comprehensive documentation
 │   ├── setup_guide.md            # Detailed installation guide
 │   ├── usage_guide.md            # Step-by-step usage instructions
 │   └── theory/                   # Security theory & concepts
-├── 🔧 elk-setup/                 # ELK Stack deployment
+├──  elk-setup/                 # ELK Stack deployment
 │   ├── docker-compose.yml        # Container orchestration
 │   ├── configs/                  # Beat configurations
 │   └── manual-setup/             # Traditional installation
-├── 📊 kibana-rules/              # Detection rules & dashboards
+├──  kibana-rules/              # Detection rules & dashboards
 │   ├── dashboards/               # Pre-built visualizations
 │   ├── detection-rules/          # Custom detection logic
 │   ├── screenshots/              # Visual documentation
 │   └── exports/                  # Kibana saved objects
-├── 📝 log-collection/            # Log storage & analysis
+├──  log-collection/            # Log storage & analysis
 │   ├── simulation-logs/          # Captured attack logs
 │   └── baseline-logs/            # Normal system behavior
 └── README.md                     # Project overview (you are here)
@@ -156,15 +156,15 @@ Elastic-ReverseShell-Detection/
 
 ---
 
-## 🛠️ **Tools & Technologies**
+##  **Tools & Technologies**
 
-### 🔧 **Core ELK Stack Components**
+###  **Core ELK Stack Components**
 
 <table> <tr> <td align="center" width="25%">
 
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
 
-**🔍 Elasticsearch** _Distributed Search & Analytics_
+** Elasticsearch** _Distributed Search & Analytics_
 
 **Features:**
 
@@ -179,7 +179,7 @@ Elastic-ReverseShell-Detection/
 
 ![Logstash](https://img.shields.io/badge/Logstash-005571?style=for-the-badge&logo=logstash&logoColor=white)
 
-**⚙️ Logstash** _Data Processing Pipeline_
+** Logstash** _Data Processing Pipeline_
 
 **Features:**
 
@@ -194,7 +194,7 @@ Elastic-ReverseShell-Detection/
 
 ![Kibana](https://img.shields.io/badge/Kibana-005571?style=for-the-badge&logo=kibana&logoColor=white)
 
-**📊 Kibana** _Data Visualization Platform_
+** Kibana** _Data Visualization Platform_
 
 **Features:**
 
@@ -209,7 +209,7 @@ Elastic-ReverseShell-Detection/
 
 ![Elastic Security](https://img.shields.io/badge/Elastic_Security-FF6B6B?style=for-the-badge&logo=elastic&logoColor=white)
 
-**🛡️ Elastic Security** _SIEM & Security Analytics_
+** Elastic Security** _SIEM & Security Analytics_
 
 **Features:**
 
@@ -224,7 +224,7 @@ Elastic-ReverseShell-Detection/
 
 ---
 
-### 📡 **Beats - Lightweight Data Shippers**
+###  **Beats - Lightweight Data Shippers**
 
 The Beats are lightweight data shippers, written in Go, that you install on your servers to capture all sorts of operational data and send it to the Elastic Stack.
 
@@ -232,16 +232,16 @@ The Beats are lightweight data shippers, written in Go, that you install on your
 
 ![Filebeat](https://img.shields.io/badge/Filebeat-FEC514?style=for-the-badge&logo=elastic&logoColor=black)
 
-**📄 Filebeat** _Log File Shipper_
+** Filebeat** _Log File Shipper_
 
 **What it does:** Collects and forwards log files from applications, services, and system logs
 
 **Key Features:**
 
-- ✅ Lightweight & efficient
-- ✅ Multi-line log support
-- ✅ Built-in modules for common apps
-- ✅ Back-pressure resilience
+-  Lightweight & efficient
+-  Multi-line log support
+-  Built-in modules for common apps
+-  Back-pressure resilience
 
 **In This Lab:**
 
@@ -264,16 +264,16 @@ filebeat.inputs:
 
 ![Auditbeat](https://img.shields.io/badge/Auditbeat-00BFB3?style=for-the-badge&logo=elastic&logoColor=white)
 
-**🔍 Auditbeat** _Security Audit Data Shipper_
+** Auditbeat** _Security Audit Data Shipper_
 
 **What it does:** Collect and ship Linux audit framework data to the Elastic Stack, monitoring user activity and processes
 
 **Key Features:**
 
-- ✅ Linux audit framework integration
-- ✅ File integrity monitoring
-- ✅ Process execution tracking
-- ✅ User activity monitoring
+-  Linux audit framework integration
+-  File integrity monitoring
+-  Process execution tracking
+-  User activity monitoring
 
 **In This Lab:**
 
@@ -295,16 +295,16 @@ auditbeat.modules:
 
 ![Winlogbeat](https://img.shields.io/badge/Winlogbeat-0078D4?style=for-the-badge&logo=windows&logoColor=white)
 
-**🪟 Winlogbeat** _Windows Event Log Shipper_
+** Winlogbeat** _Windows Event Log Shipper_
 
 **What it does:** Specifically designed to collect Windows event logs
 
 **Key Features:**
 
-- ✅ Windows Event Log API integration
-- ✅ Event filtering & enrichment
-- ✅ Security event monitoring
-- ✅ PowerShell logging support
+-  Windows Event Log API integration
+-  Event filtering & enrichment
+-  Security event monitoring
+-  PowerShell logging support
 
 **Future Enhancement:**
 
@@ -325,7 +325,7 @@ winlogbeat.event_logs:
 
 ---
 
-### 🔬 **Tool Comparison Matrix**
+###  **Tool Comparison Matrix**
 
 |**Tool**|**Primary Function**|**Data Types**|**Performance**|**Use Case in Lab**|
 |---|---|---|---|---|
@@ -336,21 +336,21 @@ winlogbeat.event_logs:
 
 ---
 
-### 🎯 **Why These Tools?**
+###  **Why These Tools?**
 
-#### **🚀 Performance Benefits**
+#### ** Performance Benefits**
 
 - **Lightweight**: Beats are lightweight data shippers written in Go
 - **Efficient**: Minimal resource consumption on monitored systems
 - **Resilient**: Built-in retry mechanisms and back-pressure handling
 
-#### **🔧 **Integration Advantages**
+#### **Integration Advantages**
 
 - **Native ELK Integration**: Filebeat works seamlessly with Logstash, Elasticsearch, and Kibana
 - **Pre-built Modules**: Ready-to-use configurations for common applications
 - **Flexible Output**: Can send directly to Elasticsearch or via Logstash
 
-#### **🛡️ **Security Focus**
+#### **Security Focus**
 
 - **Audit Trail**: Auditd provides detailed audit trail of who did what and when
 - **Real-time Detection**: Auditbeat sends events in realtime to Elasticsearch and communicates directly with the Linux audit framework
@@ -358,32 +358,32 @@ winlogbeat.event_logs:
 
 ---
 
-### 📊 **Tool Architecture Visualization**
+###  **Tool Architecture Visualization**
 
 ```mermaid
 graph TB
-    subgraph "🖥️ Linux Victim System"
-        A[📄 Log Files<br/>/var/log/*]
-        B[🔐 Audit Events<br/>Linux Kernel]
-        C[📁 File System<br/>Changes]
+    subgraph "🖥 Linux Victim System"
+        A[ Log Files<br/>/var/log/*]
+        B[ Audit Events<br/>Linux Kernel]
+        C[ File System<br/>Changes]
     end
     
-    subgraph "📡 Beats Layer"
-        D[📄 Filebeat<br/>Log Shipper]
-        E[🔍 Auditbeat<br/>Security Monitor]
+    subgraph " Beats Layer"
+        D[ Filebeat<br/>Log Shipper]
+        E[ Auditbeat<br/>Security Monitor]
     end
     
-    subgraph "🔧 Processing Layer"
-        F[⚙️ Logstash<br/>Data Pipeline]
+    subgraph " Processing Layer"
+        F[ Logstash<br/>Data Pipeline]
     end
     
-    subgraph "💾 Storage Layer"
-        G[🔍 Elasticsearch<br/>Search Engine]
+    subgraph " Storage Layer"
+        G[ Elasticsearch<br/>Search Engine]
     end
     
-    subgraph "📊 Visualization Layer"
-        H[📊 Kibana<br/>Dashboard]
-        I[🚨 Alerts<br/>Detection Rules]
+    subgraph " Visualization Layer"
+        H[ Kibana<br/>Dashboard]
+        I[ Alerts<br/>Detection Rules]
     end
     
     A --> D
@@ -401,11 +401,11 @@ graph TB
 
 ---
 
-## ⚡ **Quick Start Guide**
+##  **Quick Start Guide**
 
-### 🚀 **Phase 1: Environment Setup**
+###  **Phase 1: Environment Setup**
 
-<details> <summary><b>🐳 Option A: Docker Deployment (Recommended)</b></summary>
+<details> <summary><b> Option A: Docker Deployment (Recommended)</b></summary>
 
 ```bash
 # Clone the repository
@@ -420,7 +420,7 @@ docker-compose up -d
 docker-compose ps
 ```
 
-**✅ Expected Output:**
+** Expected Output:**
 
 ```
 NAME                STATUS              PORTS
@@ -449,7 +449,7 @@ cd kibana-8.11.0/
 
 </details>
 
-### 🎯 **Phase 2: Attack Simulation**
+###  **Phase 2: Attack Simulation**
 
 ```bash
 # Execute privilege escalation attack
@@ -458,54 +458,54 @@ chmod +x invoke_attack.sh
 ./invoke_attack.sh
 
 # Monitor real-time detection
-echo "🔍 Check Kibana dashboard at http://localhost:5601"
+echo " Check Kibana dashboard at http://localhost:5601"
 ```
 
-### 📊 **Phase 3: Detection Analysis**
+###  **Phase 3: Detection Analysis**
 
 1. **Access Kibana:** `http://localhost:5601`
 2. **Navigate to:** `Analytics → Dashboard → Linux Threat Detection`
 3. **Monitor panels:**
-    - 🚨 **Real-time Alerts**
-    - 📈 **Process Activity Timeline**
-    - 🎯 **MITRE ATT&CK Mapping**
-    - 👥 **User Behavior Analysis**
+    -  **Real-time Alerts**
+    -  **Process Activity Timeline**
+    -  **MITRE ATT&CK Mapping**
+    -  **User Behavior Analysis**
 
 ---
 
-## 📈 **Dashboard Previews**
+##  **Dashboard Previews**
 
-### 🖥️ **Main Detection Dashboard**
+###  **Main Detection Dashboard**
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ 🛡️ Linux Threat Detection Dashboard                        │
+│  Linux Threat Detection Dashboard                           │
 ├─────────────────────────────────────────────────────────────┤
-│ 🚨 Active Alerts: 3        📊 Events/min: 127             │
-│ 🎯 MITRE Techniques: 2     ⏱️ Last Update: 30s ago        │
+│  Active Alerts: 3         Events/min: 127                   │
+│  MITRE Techniques: 2      Last Update: 30s ago              │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  📈 Attack Timeline                                         │
-│  ████████████████████████████████████████████████████      │
+│   Attack Timeline                                           │
+│  ████████████████████████████████████████████████████       │
 │                                                             │
-│  👥 Top Suspicious Users    🔧 Top Processes               │
-│  ┌─────────────────────┐   ┌─────────────────────┐         │
-│  │ root        █████   │   │ sudo        █████   │         │
-│  │ attacker    ███     │   │ su          ███     │         │
-│  │ guest       █       │   │ bash        ██      │         │
-│  └─────────────────────┘   └─────────────────────┘         │
+│   Top Suspicious Users      Top Processes                   │
+│  ┌─────────────────────┐   ┌─────────────────────┐          │
+│  │ root        █████   │   │ sudo        █████   │          │
+│  │ attacker    ███     │   │ su          ███     │          │
+│  │ guest       █       │   │ bash        ██      │          │
+│  └─────────────────────┘   └─────────────────────┘          │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🎓 **Learning Outcomes**
+##  **Learning Outcomes**
 
-### 📚 **Technical Skills Developed**
+###  **Technical Skills Developed**
 
 <table> <tr> <td align="center" width="33%">
 
-**🔍 SIEM Operations**
+** SIEM Operations**
 
 - Log ingestion & parsing
 - Correlation rule creation
@@ -514,7 +514,7 @@ echo "🔍 Check Kibana dashboard at http://localhost:5601"
 
 </td> <td align="center" width="33%">
 
-**🛡️ Security Analysis**
+** Security Analysis**
 
 - Attack pattern recognition
 - Behavioral analytics
@@ -523,7 +523,7 @@ echo "🔍 Check Kibana dashboard at http://localhost:5601"
 
 </td> <td align="center" width="33%">
 
-**🚀 Detection Engineering**
+** Detection Engineering**
 
 - Custom rule development
 - Dashboard design
@@ -532,7 +532,7 @@ echo "🔍 Check Kibana dashboard at http://localhost:5601"
 
 </td> </tr> </table>
 
-### 🏆 **Certification Alignment**
+###  **Certification Alignment**
 
 |**Certification**|**Relevant Skills**|
 |---|---|
@@ -543,40 +543,21 @@ echo "🔍 Check Kibana dashboard at http://localhost:5601"
 
 ---
 
-## 🔮 **Advanced Features & Future Enhancements**
+##  **Advanced Features & Future Enhancements**
 
-### 🚀 **Planned Improvements**
+###  **Expansion Opportunities**
 
-```mermaid
-roadmap
-    title Roadmap for Elastic SIEM Lab
-    section Current Release
-        Basic Privilege Escalation Detection    : done, des1, 2024-01-01, 2024-02-01
-        Kibana Dashboard Integration           : done, des2, 2024-01-15, 2024-02-15
-    section Phase 2
-        Machine Learning Anomaly Detection     : active, des3, 2024-03-01, 2024-04-01
-        Windows Environment Support           : des4, 2024-03-15, 2024-04-30
-    section Phase 3
-        Threat Intelligence Integration       : des5, 2024-05-01, 2024-06-01
-        Automated Response Playbooks         : des6, 2024-05-15, 2024-06-30
-    section Future
-        Cloud Security Monitoring           : des7, 2024-07-01, 2024-08-01
-        Container Security Detection        : des8, 2024-07-15, 2024-08-31
-```
-
-### 🎯 **Expansion Opportunities**
-
-- **🤖 Machine Learning:** Implement Elastic's ML capabilities for anomaly detection
-- **🌐 Multi-Platform:** Add Windows and macOS attack scenarios
-- **☁️ Cloud Integration:** Include AWS/Azure security log analysis
-- **🐳 Container Security:** Docker and Kubernetes threat detection
-- **🔗 Threat Intelligence:** Integration with MISP and other TI feeds
+- ** Machine Learning:** Implement Elastic's ML capabilities for anomaly detection
+- ** Multi-Platform:** Add Windows and macOS attack scenarios
+- ** Cloud Integration:** Include AWS/Azure security log analysis
+- ** Container Security:** Docker and Kubernetes threat detection
+- ** Threat Intelligence:** Integration with MISP and other TI feeds
 
 ---
 
-## 📖 **Documentation**
+##  **Documentation**
 
-### 📚 **Comprehensive Guides**
+###  **Comprehensive Guides**
 
 |Document|Purpose|Audience|
 |---|---|---|
@@ -585,23 +566,23 @@ roadmap
 |**[Theory Guide](https://claude.ai/chat/docs/theory/)**|Security concepts & background|Students & beginners|
 |**[API Reference](https://claude.ai/chat/docs/api/)**|Elastic Stack configuration|Developers|
 
-### 🎥 **Video Tutorials**
+###  **Video Tutorials**
 
-- 🎬 **Lab Setup Walkthrough** _(Coming Soon)_
-- 🎬 **Attack Simulation Demo** _(Coming Soon)_
-- 🎬 **Dashboard Creation Tutorial** _(Coming Soon)_
+-  **Lab Setup Walkthrough** _(Coming Soon)_
+-  **Attack Simulation Demo** _(Coming Soon)_
+-  **Dashboard Creation Tutorial** _(Coming Soon)_
 
 ---
 
-## 🌟 **Success Stories & Use Cases**
+##  **Success Stories & Use Cases**
 
-### 🎓 **Educational Impact**
+###  **Educational Impact**
 
 > _"This lab provided hands-on experience that directly translated to my SOC analyst role. The MITRE ATT&CK integration was particularly valuable."_
 > 
 > **— Sarah M., Cybersecurity Student**
 
-### 🏢 **Professional Development**
+###  **Professional Development**
 
 > _"Used this as a foundation for our enterprise SIEM deployment. The detection rules saved us months of development time."_
 > 
@@ -609,11 +590,11 @@ roadmap
 
 ---
 
-## 🤝 **Contributing**
+##  **Contributing**
 
-### 🔧 **How to Contribute**
+###  **How to Contribute**
 
-<details> <summary><b>🚀 Development Setup</b></summary>
+<details> <summary><b> Development Setup</b></summary>
 
 ```bash
 # Fork the repository
@@ -631,17 +612,17 @@ git push origin feature/new-detection-rule
 
 </details>
 
-### 📋 **Contribution Areas**
+###  **Contribution Areas**
 
-- 🎯 **New Attack Scenarios** - Add more MITRE ATT&CK techniques
-- 📊 **Dashboard Improvements** - Enhance visualizations
-- 🔍 **Detection Rules** - Create new correlation logic
-- 📚 **Documentation** - Improve guides and tutorials
-- 🐛 **Bug Fixes** - Resolve issues and improve stability
+-  **New Attack Scenarios** - Add more MITRE ATT&CK techniques
+-  **Dashboard Improvements** - Enhance visualizations
+-  **Detection Rules** - Create new correlation logic
+-  **Documentation** - Improve guides and tutorials
+-  **Bug Fixes** - Resolve issues and improve stability
 
 ---
 
-## 📞 **Support & Community**
+##  **Support & Community**
 
 <div align="center">
 
@@ -651,14 +632,14 @@ git push origin feature/new-detection-rule
 
 ### 💬 **Get Help**
 
-- 🐛 **Bug Reports:** Use GitHub Issues
-- 💡 **Feature Requests:** Submit via Discussions
-- 📚 **Documentation:** Check the Wiki
-- 💬 **General Questions:** Community Discussions
+-  **Bug Reports:** Use GitHub Issues
+-  **Feature Requests:** Submit via Discussions
+-  **Documentation:** Check the Wiki
+-  **General Questions:** Community Discussions
 
 ---
 
-## 👨‍💻 **Author**
+##  **Author**
 
 <div align="center">
 
@@ -669,22 +650,22 @@ _SIEM & Detection Engineering Enthusiast_
 
 </div>
 
-### 🏆 **About the Author**
+###  **About the Author**
 
 Passionate cybersecurity professional specializing in:
 
-- 🛡️ **SIEM Engineering** - Enterprise security monitoring solutions
-- 🔍 **Threat Detection** - Advanced analytics and correlation rules
-- 📊 **Security Analytics** - Data-driven security insights
-- 🎓 **Security Education** - Training and knowledge sharing
+-  **SIEM Engineering** - Enterprise security monitoring solutions
+-  **Threat Detection** - Advanced analytics and correlation rules
+-  **Security Analytics** - Data-driven security insights
+-  **Security Education** - Training and knowledge sharing
 
 ---
 
-## 📄 **License**
+##  **License**
 
 This project is licensed under the **MIT License** - see the [LICENSE](https://claude.ai/chat/LICENSE) file for details.
 
-### 🔓 **Open Source Philosophy**
+###  **Open Source Philosophy**
 
 ```
 MIT License - Free to use, modify, and distribute
@@ -700,7 +681,7 @@ MIT License - Free to use, modify, and distribute
 
 <div align="center">
 
-**🌟 Star this repository if it helped you master SIEM technology! 🌟**
+** Star this repository if it helped you master SIEM technology! **
 
 _Made with ❤️ for the cybersecurity community_
 
