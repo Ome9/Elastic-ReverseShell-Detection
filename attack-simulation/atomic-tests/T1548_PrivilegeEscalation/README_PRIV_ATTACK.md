@@ -136,16 +136,20 @@ Log Sources Generated:
 
 ### 🖥️ **Attack Execution**
 
-![[Pasted image 20250804012824.png]]
+<img width="1919" height="941" alt="Pasted image 20250804012824" src="https://github.com/user-attachments/assets/8ea4a583-906b-46e0-bb0e-4ca4a8d17600" />
+
 
 ### 📊 **Kibana Dashboard Detection**
 
-![[Pasted image 20250804013106.png]]
+<img width="1919" height="930" alt="Pasted image 20250804013106" src="https://github.com/user-attachments/assets/16f96a2e-1e3a-4e2d-aa1f-cea7c2f7ff98" />
+
 
 ### 🔍 **Event Timeline Analysis**
 
-![[Pasted image 20250804013441.png]]
-![[Pasted image 20250804013551.png]]
+<img width="1900" height="667" alt="Pasted image 20250804013441" src="https://github.com/user-attachments/assets/3ff13d8e-32f0-44bd-8226-bb4d521fb000" />
+
+<img width="1903" height="665" alt="Pasted image 20250804013551" src="https://github.com/user-attachments/assets/3d5fa2fd-b364-4b48-baac-c877d5279d1f" />
+
 
 </div>
 
